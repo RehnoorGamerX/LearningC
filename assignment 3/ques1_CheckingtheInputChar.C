@@ -1,31 +1,26 @@
-#include <stdio.h>
-#include <ctype.h>
+//This program finds whether a number is Uppercase or Lowercase or digit or any other character
 
-int main() {
-    char input;
-    
-    // Prompt the user to enter a character
-    printf("Enter a character: ");
-    
-    // store the input
-    scanf("%c", &input);
-    
-    // Check if the entered character is a digit
-    if (isdigit(input)) {
-        printf("You have entered a digit.\n");
+#include<stdio.h>
+int main()
+{
+    char a;
+    printf("Enter a Character: ");
+    scanf("%c",&a);
+    if(a>=65 && a<=90)
+    {
+        printf("Character Entered is Uppercase");
     }
-    // Check if the entered character is an uppercase letter
-    else if (isupper(input)) {
-        printf("You have entered an uppercase letter.\n");
+    else if(a>=97 && a<=122)
+    {
+        printf("Character Entered is Lowercase");
     }
-    // Check if the entered character is a lowercase letter
-    else if (islower(input)) {
-        printf("You have entered a lowercase letter.\n");
+    else if(a>=48 && a<=57)
+    {
+        printf("Character Entered is a Digit");
     }
-    // The character is not a digit, uppercase, or lowercase letter
-    else {
-        printf("You have entered a special symbol.\n");
+    else
+    {
+        printf("Any other Character");
     }
-    
     return 0;
 }
